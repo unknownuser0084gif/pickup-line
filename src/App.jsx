@@ -85,7 +85,7 @@ function App() {
                      <ToastContainer />
 
                      {/* main */}
-                     <div className="max-w-md fixed max-h-8/10 overflow-auto">
+                     <main className="max-w-md min-w-full fixed max-h-8/10 overflow-auto">
                             {/* SEARCH */}
                             {(search.title.length != 0 || search.text.length != 0) ? (
                                    <div className="max-w-md max-h-8/10 overflow-auto px-6 py-4  space-y-8">
@@ -93,7 +93,6 @@ function App() {
                                           {
                                                  search.title.length ? (
                                                         <>
-                                                               {console.log(search.title)}
 
                                                                <h1 className="w-full py-2 mb-4 border-b border-neutral-400 mx-auto text-amber-600">بر اساس عنوان</h1>
                                                                <Accordion>
@@ -187,7 +186,7 @@ function App() {
                                           </Accordion>
                                    ) : "Loading..."}
                             </div>
-                     </div>
+                     </main>
 
                      {/* bg black */}
                      <motion.div
