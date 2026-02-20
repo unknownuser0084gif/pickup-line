@@ -77,7 +77,7 @@ export default function Navbar({ refresh }) {
                             onClick={() => setOpen(true)}
                             className="w-full mt-2 rounded-lg p-2 cursor-pointer bg-blue-300 text-center"
                      >
-                            ایجاد فلان جدید
+                            ایجاد پیکاب جدید
                      </div>
                      {/* ///////------nav modal------///// */}
                      <div
