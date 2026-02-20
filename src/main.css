@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@font-face {
+       font-family: dirooz;
+       src: url('./assets/fonts/DIROOZ.TTF');
+}
+
+@theme{
+       --font-dirooz : dirooz;
+}
+
+.none-scrolle::-webkit-scrollbar {
+       display: none;
+}
+
+* {
+       @apply font-dirooz!
+}
