@@ -36,11 +36,13 @@ export default function Navbar({ refresh }) {
               }
               // seprate data
               for (let i = 1; i < values.length; i++) {
-                     mainData.messages.push({
-                            id: i,
-                            titleId: mainData.id,
-                            text: values[i]
-                     })
+                     if (values[i] !== "" && values[i] !== null) {
+                            mainData.messages.push({
+                                   id: i,
+                                   titleId: mainData.id,
+                                   text: values[i]
+                            })
+                     }
               }
               // create new data
               const newData = [...Get("data"), mainData];
