@@ -14,6 +14,7 @@ export function loadData(callback) {
                             position: "top-right",
                             autoClose: 5000,
                             hideProgressBar: false,
+                            pauseOnFocusLoss: false,
                             closeOnClick: true,
                             pauseOnHover: true,
                             draggable: true,

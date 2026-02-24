@@ -30,7 +30,7 @@ export default function Navbar({ refresh }) {
               }
               // main obj
               const mainData = {
-                     id: Get("data").length + 1,
+                     id: Math.floor(Math.random() * 3546123) * Get("data").length,
                      title: values[0],
                      messages: []
               }
@@ -38,7 +38,7 @@ export default function Navbar({ refresh }) {
               for (let i = 1; i < values.length; i++) {
                      mainData.messages.push({
                             id: i,
-                            titleId: Get("data").length + 1,
+                            titleId: mainData.id,
                             text: values[i]
                      })
               }
@@ -61,12 +61,14 @@ export default function Navbar({ refresh }) {
                             hideProgressBar: false,
                             closeOnClick: true,
                             pauseOnHover: false,
+                            pauseOnFocusLoss: false,
                             draggable: true,
                             theme: "light"
                      });
                      frm.current.reset()
                      setOpen(false);
-                     refresh(prev => prev + 1)
+                     refresh(prev => prev + 1);
+                     setNewInput([1])
               }, newData);
 
        }
