@@ -22,6 +22,7 @@ function App() {
        const [newInput, setNewInput] = useState([1]);
        const [openEditor, setOpenEditor] = useState(false);
        const [editorData, setEditorData] = useState(null);
+       const [hideMainSection , setHideMainSection] = useState(false)
 
        const handleSearch = useCallback(e => {
               e.preventDefault()
@@ -164,7 +165,7 @@ function App() {
        }, [refresh])
 
        return (
-              <section className="max-w-md min-h-dvh mx-auto bg-gray-200/60 relative" dir="rtl">
+              <section className="max-w-md min-h-dvh mx-auto bg-gray-200/60 relative" style={{display : hideMainSection ? "none" : "block"}} dir="rtl">
                      {/* toast */}
                      <ToastContainer />
 
@@ -324,7 +325,7 @@ function App() {
                                           <button type="submit" className="inline absolute top-[0.8rem] left-2.5 cursor-pointer scale-180 rotate-270 text-neutral-500" >&#10170;</button>
                                    </form>
                                    <div>
-                                          <Navbar refresh={setRefresh} />
+                                          <Navbar refresh={setRefresh} hideFunc={{hideMainSection,setHideMainSection}} />
                                    </div>
                             </div>
 

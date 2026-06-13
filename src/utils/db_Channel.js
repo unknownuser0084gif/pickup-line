@@ -1,7 +1,7 @@
 import { toast } from "react-toastify";
 
 export function loadData(callback) {
-     fetch("https://api.jsonbin.io/v3/b/699727c5ae596e708f379737", {
+     fetch("https://api.jsonbin.io/v3/b/6a2c5f26da38895dfeb6f0db", {
           method: "GET",
           headers: {
                "X-Master-Key": "$2a$10$IGp4PqCfg92WldTUE5P75eYzZXa3gPh3sTmi1Bom1R5QGueyxX4nO"
@@ -23,7 +23,7 @@ export function loadData(callback) {
           })
 }
 export function saveData(callback, newData) {
-     fetch("https://api.jsonbin.io/v3/b/699727c5ae596e708f379737", {
+     fetch("https://api.jsonbin.io/v3/b/6a2c5f26da38895dfeb6f0db", {
           method: "PUT",
           headers: {
                "Content-Type": "application/json",
